@@ -9,6 +9,7 @@
     "watch": "npm run tsc -- -w"
   },
   "keywords": [],
+  "repository": "github:novisci/kpipe-url",
   "author": "Paul Rowan <prowan@novisci.com>",
   "license": "MIT",
   "devDependencies": {
