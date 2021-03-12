@@ -19,7 +19,7 @@ export interface UrlPipelineOpts extends UrlInStreamsOpts, UrlOutStreamsOpts {
   statsLabel?: string
 }
 
-export function urlPipeline (inUrl: string, outUrl: string, transforms = [], opts: UrlPipelineOpts) {
+export function urlPipeline (inUrl: string, outUrl: string, transforms = [], opts: UrlPipelineOpts): Promise<void> {
   if (!Array.isArray(transforms)) {
     throw Error('UrlPipeline expects transforms to be an array of object Transform streams')
   }

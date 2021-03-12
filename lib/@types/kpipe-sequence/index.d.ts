@@ -9,7 +9,7 @@ declare module 'kpipe-sequence' {
 
   type PromiseEmitterEvent = 'notify' | 'report'
 
-  interface PromiseEmitter extends Promise<void> {
+  export interface PromiseEmitter extends Promise<void> {
     on (name: PromiseEmitterEvent, Listener): void
     off (name: PromiseEmitterEvent, Listener): void
     emit (name: PromiseEmitterEvent, ...args: any[]): void

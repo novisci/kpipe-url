@@ -24,7 +24,7 @@ export interface UrlPipelineSortedOpts extends UrlInStreamsOpts, UrlOutStreamsOp
 
 const urlType = (url: string) => parseUrl(url).protocol
 
-export function urlPipelineSorted (inUrl: string, outUrl: string, transforms: stream.Stream[]  = [], opts: UrlPipelineSortedOpts) {
+export function urlPipelineSorted (inUrl: string, outUrl: string, transforms: stream.Stream[]  = [], opts: UrlPipelineSortedOpts): Promise<void> {
   if (!Array.isArray(transforms)) {
     throw Error('UrlPipeline expects transforms to be an array of object Transform streams')
   }
