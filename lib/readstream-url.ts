@@ -15,6 +15,7 @@
  */
 import { readerUrl } from './reader-url'
 import { ReaderOpts } from 'kpipe-core'
+import { decompressExt } from './decompress-ext'
 
 export interface ReadStreamUrlOpts extends ReaderOpts {
   decompress?: boolean
@@ -29,7 +30,7 @@ export function readStreamUrl (url: string, { decompress, ...readerOpts }: ReadS
 
   let inStream = stream
   if (decompress && ['s3', 'fs'].includes(reader.type())) {
-    inStream = stream.pipe(require('./decompress-ext')(reader.streamOpts()[0]))
+    inStream = stream.pipe(decompressExt(reader.streamOpts()[0]))
   }
 
   inStream.filename = () => reader.streamOpts()[0]

@@ -7,7 +7,7 @@ import * as unzipper from 'unzipper'
 /**
  * Infer decompression required based on filename extension
  */
-module.exports = function (filename: string) {
+export function decompressExt (filename: string) {
   if (typeof filename === 'undefined') {
     throw Error('options.filename is required for decompress-ext')
   }
