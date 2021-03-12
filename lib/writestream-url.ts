@@ -15,12 +15,13 @@
  */
 import { writerUrl } from './writer-url'
 import { compressExt } from './compress-ext'
+import { WriterOpts } from 'kpipe-core'
 
-export interface WriteStreamUrlOpts {
+export interface WriteStreamUrlOpts extends WriterOpts {
   compress?: boolean
 }
 
-export function writeStreamUrl (url: string, { compress, ...writerOpts }: WriteStreamUrlOpts = {}) {
+export function writeStreamUrl (url: string, { compress, ...writerOpts }: WriteStreamUrlOpts) {
   const writer = writerUrl(url, writerOpts)
 
   compress = typeof compress === 'undefined' ? true : !!compress

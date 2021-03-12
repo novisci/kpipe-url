@@ -14,12 +14,13 @@
  *  kafka://
  */
 import { readerUrl } from './reader-url'
+import { ReaderOpts } from 'kpipe-core'
 
-export interface ReadStreamUrlOpts {
+export interface ReadStreamUrlOpts extends ReaderOpts {
   decompress?: boolean
 }
 
-export function readStreamUrl (url: string, { decompress, ...readerOpts }: ReadStreamUrlOpts = {}) {
+export function readStreamUrl (url: string, { decompress, ...readerOpts }: ReadStreamUrlOpts) {
   const reader = readerUrl(url, readerOpts)
 
   decompress = typeof decompress === 'undefined' ? true : !!decompress
