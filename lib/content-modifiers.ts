@@ -1,4 +1,4 @@
-import { ContentType, ContentTypeNames } from './stream-url.d'
+import { ContentType, ContentTypeNames } from './stream-url'
 import * as Streams from 'kpipe-streams'
 import stream from 'stream'
 

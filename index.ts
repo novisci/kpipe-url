@@ -9,6 +9,7 @@ export { urlOutStreams } from './lib/url-outstreams'
 export { urlOutMultiplex } from './lib/url-outmultiplex'
 export { urlPipeline } from './lib/url-pipeline'
 export { urlPipelineSorted } from './lib/url-pipeline-sorted'
+export { contentModifiers } from './lib/content-modifiers'
  
 // export = {
 //   readerUrl, readStreamUrl,

@@ -3,7 +3,7 @@
  *  Add transforms necessary to produce the supplied content type
  */
 import { contentModifiers } from './content-modifiers'
-import { ContentType, ContentTypeNames } from './stream-url.d'
+import { ContentType, ContentTypeNames } from './stream-url'
 import { readStreamUrl, ReadStreamUrlOpts } from './readstream-url'
 
 export interface UrlInStreamsOpts extends ReadStreamUrlOpts {

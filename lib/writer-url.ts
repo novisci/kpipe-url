@@ -16,7 +16,7 @@
 import { Writer, StreamOpts, BackendType } from 'kpipe-core'
 import { parseUrl } from './parse-url'
 import path from 'path'
-import { UrlStreamCreateFn, PartialUrlStreamCreateFn } from './stream-url.d'
+import { UrlStreamCreateFn, PartialUrlStreamCreateFn } from './stream-url'
 
 export function writerUrl (url: string, { ...writerOpts } = {}): UrlStreamCreateFn {
   const purl = parseUrl(url)

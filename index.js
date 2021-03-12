@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.urlPipelineSorted = exports.urlPipeline = exports.urlOutMultiplex = exports.urlOutStreams = exports.urlInStreams = exports.compressExt = exports.parseUrl = exports.writeStreamUrl = exports.writerUrl = exports.readStreamUrl = exports.readerUrl = void 0;
+exports.contentModifiers = exports.urlPipelineSorted = exports.urlPipeline = exports.urlOutMultiplex = exports.urlOutStreams = exports.urlInStreams = exports.compressExt = exports.parseUrl = exports.writeStreamUrl = exports.writerUrl = exports.readStreamUrl = exports.readerUrl = void 0;
 var reader_url_1 = require("./lib/reader-url");
 Object.defineProperty(exports, "readerUrl", { enumerable: true, get: function () { return reader_url_1.readerUrl; } });
 var readstream_url_1 = require("./lib/readstream-url");
@@ -23,6 +23,8 @@ var url_pipeline_1 = require("./lib/url-pipeline");
 Object.defineProperty(exports, "urlPipeline", { enumerable: true, get: function () { return url_pipeline_1.urlPipeline; } });
 var url_pipeline_sorted_1 = require("./lib/url-pipeline-sorted");
 Object.defineProperty(exports, "urlPipelineSorted", { enumerable: true, get: function () { return url_pipeline_sorted_1.urlPipelineSorted; } });
+var content_modifiers_1 = require("./lib/content-modifiers");
+Object.defineProperty(exports, "contentModifiers", { enumerable: true, get: function () { return content_modifiers_1.contentModifiers; } });
 // export = {
 //   readerUrl, readStreamUrl,
 //   writerUrl, writeStreamUrl,

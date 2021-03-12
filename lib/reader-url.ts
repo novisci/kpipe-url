@@ -16,7 +16,7 @@
 import { Reader, StreamOpts, BackendType } from 'kpipe-core'
 import { parseUrl } from './parse-url'
 import path from 'path'
-import { UrlStreamCreateFn, PartialUrlStreamCreateFn } from './stream-url.d'
+import { UrlStreamCreateFn, PartialUrlStreamCreateFn } from './stream-url'
 
 export function readerUrl (url: string, { ...readerOpts } = {}): UrlStreamCreateFn {
   const purl = parseUrl(url)

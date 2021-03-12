@@ -3,7 +3,7 @@
  *  Add transforms necessary to convert from supplied content type
  */
 import { contentModifiers } from './content-modifiers'
-import { ContentType, ContentTypeNames, UrlStreamCreateFn } from './stream-url.d'
+import { ContentType, ContentTypeNames, UrlStreamCreateFn } from './stream-url'
 import { WriteStreamUrlOpts } from './writestream-url'
 import { compressExt } from './compress-ext'
 import { writerUrl } from './writer-url'

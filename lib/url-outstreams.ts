@@ -3,7 +3,7 @@
  *  Add transforms necessary to convert from supplied content type
  */
 import { contentModifiers } from './content-modifiers'
-import { ContentType, ContentTypeNames } from './stream-url.d'
+import { ContentType, ContentTypeNames } from './stream-url'
 import { writeStreamUrl, WriteStreamUrlOpts } from './writestream-url'
 
 export interface UrlOutStreamsOpts extends WriteStreamUrlOpts {

@@ -7,7 +7,7 @@ import { PipelinePromise } from 'kpipe-sequence'
 import { Observe } from 'kpipe-streams'
 import { urlInStreams, UrlInStreamsOpts } from './url-instreams'
 import { urlOutStreams, UrlOutStreamsOpts } from './url-outstreams'
-import { ContentType, ContentTypeNames } from './stream-url.d'
+import { ContentType, ContentTypeNames } from './stream-url'
 import { parseUrl, ProtocolName } from './parse-url'
 
 const urlType = (url: string): ProtocolName => parseUrl(url).protocol
