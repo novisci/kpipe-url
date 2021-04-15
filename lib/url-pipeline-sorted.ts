@@ -41,7 +41,7 @@ export function urlPipelineSorted (inUrl: string, outUrl: string, transforms: st
   const inputContent: ContentType = inContent || content || 'json'
   const outputContent: ContentType = outContent || content || 'json'
 
-  if (typeof inContent === 'undefined') {
+  if (typeof inputContent === 'undefined') {
     throw(Error(`Undefined inContent in urlPipelineSorted()`))
   }
 
