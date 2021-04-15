@@ -38,6 +38,8 @@ export function urlOutMultiplex (url: string, {
     throw Error('Kafka write streams do not support content \'buffer\'')
   }
 
+  console.info(`MULTIPLEX: ${url}`)
+
   return multiplexedStream(writer, content, cbMultiplex, { compress })
 }
 
@@ -57,10 +59,8 @@ function multiplexedStream (
       const streamOpts = writer.streamOpts()
       switch (writer.type()) {
         case 's3':
-          streamOpts[0] = `${term}/${streamOpts[0]}`
-          break
         case 'fs':
-          streamOpts[0] = `${term}-${streamOpts[0]}`
+          streamOpts[0] = `${term}/${streamOpts[0]}`
           break
         case 'kafka':
           streamOpts[0] = `${streamOpts[0]}-${term}`
