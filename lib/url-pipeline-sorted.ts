@@ -56,7 +56,7 @@ export function urlPipelineSorted (inUrl: string, outUrl: string, transforms: st
     throw Error('Kafka write streams do not support content \'buffer\'')
   }
 
-  const externalSort = new ExternalSort()
+  const externalSort = new ExternalSort(process.env.KPIPE_FILE_WORK_DIR)
 
   // const writerOpts = { content: outputContent, ...rest }
 
