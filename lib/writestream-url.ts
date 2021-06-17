@@ -30,7 +30,7 @@ export function writeStreamUrl (url: string, { compress, ...writerOpts }: WriteS
 
   let outStream = stream
   if (compress && ['s3', 'fs'].includes(writer.type())) {
-    outStream = compressExt(writer.streamOpts()[0])
+    outStream = compressExt(writer.streamOpts()[0], { quiet: writerOpts.quiet })
     outStream.pipe(stream)
   }
 

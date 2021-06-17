@@ -27,6 +27,10 @@ declare module 'kpipe-core' {
   
   // Backend creator functions
 
+  interface CommonBackendOpts {
+    quiet?: boolean   // Quiet info logging (handy for multi-stream backends)
+  }
+
   interface FsWriterOpts { prefix?: string }
   interface KafkaWriterOpts {
     brokers: string
@@ -44,6 +48,7 @@ declare module 'kpipe-core' {
     partSize?: number
   }
   export interface WriterOpts extends
+    CommonBackendOpts,
     FsWriterOpts,
     KafkaWriterOpts,
     S3WriterOpts
@@ -69,6 +74,7 @@ declare module 'kpipe-core' {
   }
 
   export interface ReaderOpts extends 
+    CommonBackendOpts,
     FsReaderOpts,
     KafkaReaderOpts,
     S3ReaderOpts

@@ -7,18 +7,20 @@ import * as unzipper from 'unzipper'
 /**
  * Infer decompression required based on filename extension
  */
-export function decompressExt (filename: string) {
+export function decompressExt (filename: string, { quiet }: { quiet?: boolean } = {}) {
   if (typeof filename === 'undefined') {
     throw Error('options.filename is required for decompress-ext')
   }
-console.error('decompress-ext: ' + filename)
+
   switch (path.extname(filename)) {
     case '.zip':
+      !quiet && console.info('DECOMPRESS Zip (.zip)')
       return unzipper.ParseOne()
     case '.snappy':
+      !quiet && console.info('DECOMPRESS Snappy (.snappy)')
       return Streams.Transform.SnappyUncompress()
     case '.gz':
-      console.info('DECOMPRESS Gunzip (.gz)')
+      !quiet && console.info('DECOMPRESS Gunzip (.gz)')
       return zlib.createGunzip()
     default:
       return new stream.PassThrough()

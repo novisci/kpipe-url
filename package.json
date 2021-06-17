@@ -1,6 +1,6 @@
 {
   "name": "kpipe-url",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "Translate URLs into kpipe stream generators",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,9 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "kpipe-core": "^0.12.1",
+    "kpipe-core": "^0.12.6",
     "kpipe-sequence": "^0.9.5",
-    "kpipe-streams": "^0.10.1",
+    "kpipe-streams": "^0.10.2",
     "uid-safe": "^2.1.5",
     "unzipper": "^0.10.11"
   }
